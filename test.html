@@ -1,0 +1,40 @@
+<html>
+    <head>
+    </head>
+<body>
+
+    <input id="pswd" value="wegjn">
+    <div id="msg"></div>
+    </body>
+    <script>
+        // state pattern that we want the password to match
+        let lowercasepattern = /[a-z]/g;
+        let uppercasepattern = /[A-Z]/g;
+        let numberpattern = /[0-9]/g;
+        
+        //vget password value from input
+        let pswd = document.getElementById('pswd').value;
+    
+        //check if password has number
+        let answer = numberpattern.test(pswd);
+        //display if password has number or not
+        document.getElementById('msg').innerHTML = answer;
+
+        //check if password has uppercasepattern
+        let answer = uppercasepattern.test(pswd);
+        //display if password has uppercase
+        document.getElementById('msg').innerHTML = answer;
+
+        //check if password has lowercasepattern
+        let answer = lowercasepattern.test(pswd);
+        //display if password has uppercase
+        document.getElementById('msg').innerHTML = answer;
+
+        //how can we color div red
+        document.getElementById('msg').className = bg-red-500;
+
+        //how can we color div green
+        document.getElementById('msg').className = bg-green-500;
+    
+</script>
+</html>

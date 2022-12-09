@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.0/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+
+    <input id="pswd" onkeydown="keylogupper()">
+    <div id="msg"></div>
+    <div id="msg1"></div>
+    </body>
+    <script>
+        //sate pattern that we want the password to match
+        function keylogupper() {
+        
+        // state pattern that we want the password to match
+        //let lowercasepattern = /[a-z]/g;
+        let uppercasepattern = /[A-Z]/g;
+        //let numberpattern = /[0-9]/g;
+        
+        //get password value from input
+        let pswd = document.getElementById('pswd').value;
+    
+        //check if password has number
+        //let answer = numberpattern.test(pswd);
+        //display if password has number or not
+        //document.getElementById('msg').innerHTML = answer;
+
+        //check if password has uppercasepattern
+        let answer = uppercasepattern.test(pswd);
+        //display if password has uppercase
+        document.getElementById('msg').innerHTML = answer;
+
+        //check if password has lowercasepattern
+        //let answer = lowercasepattern.test(pswd);
+        //display if password has uppercase
+        //document.getElementById('msg').innerHTML = answer;
+
+        //if answer is true turn div green via classname
+        if (answer === false){
+        document.getElementById('msg').className = "bg-red-500";
+        }
+        //if answer is true turn div green via classname
+        else if (answer === true) {
+        document.getElementById('msg').className = "bg-green-500";
+        }
+        }
+
+
+        function keylognum() {
+        let numberpattern = /[0-9]/g;
+        let pswd = document.getElementById('pswd').value;
+        let answer = uppercasepattern.test(pswd);
+        document.getElementById('msg1').innerHTML = answer;
+        if (answer === false){
+        document.getElementById('msg1').className = "bg-red-500";
+        }
+        else if (answer === true) {
+        document.getElementById('msg1').className = "bg-green-500";
+        }
+        }
+</script>
+</html>

@@ -4,18 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="val.js"></script>
-
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.0/dist/full.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div>
             <form>
-                <input name="fname" id="fname" placeholder="First name">
-                <input name="lname" id="lname" placeholder="Last name">
-                <input name="email" id="email" placeholder="email">
-                <input name="password" id="password" placeholder="password">
+                <input name="fname" id="fname" placeholder="First name" class="border">
+                <input name="lname" id="lname" placeholder="Last name" class="border">
+                <input name="email" id="email" placeholder="email" class="border">
+                <input name="password" id="password" placeholder="password" class="border">
                 <button name="submit" id="submit">Signup</button>
             </form>
-
         </div>
+
+        <input id="pswd" onkeydown="keylogupper()" class="border">
+        <div id="msg"></div>
+
     </body>
 </html>

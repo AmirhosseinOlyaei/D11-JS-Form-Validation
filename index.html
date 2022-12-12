@@ -9,21 +9,21 @@
     </head>
     <body>
         <div>
-            <form>
+            <form><br>
                 <input name="fname" id="fname" placeholder="First name" class="border">
                 <input name="lname" id="lname" placeholder="Last name" class="border">
                 <input name="email" id="email" placeholder="email" class="border">
-                <input name="password" id="pswd" placeholder="password" class="border" onkeydown="checkUpper(); checkLower(); checkNumber(); checkLen()">
+                <input name="password" id="pswd" placeholder="password" class="border" onkeydown="checkUpper(); checkLower(); checkNumber(); checkLen(); requirementsMet()">
                 <button name="submit" id="submit" class="border">Signup</button>
             </form>
         </div>
-        <div>
+        <div class="text-gray-400 small">
         Check for uppercase in password:<div id="msg1"></div>
         Check for lowercase in password:<div id="msg2"></div>
         Check for number in password:<div id="msg3"></div>
         Check for minimum length in password:<div id="msg4"></div>
-        <div id="msg5"></div>
         </div>
     
     </body>
 </html>
+

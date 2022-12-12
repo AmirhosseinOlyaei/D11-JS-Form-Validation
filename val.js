@@ -14,17 +14,16 @@ function checkUpper() {
     //check if password has uppercasepattern
     let answer = uppercasepattern.test(pswd);
 
+    //display if password has uppercase
+    document.getElementById('msg1').innerHTML = answer;
+
     //if answer is true turn div green via classname
     if (answer === false){
     document.getElementById('msg1').className = "text-red-600";
-        //display if password has uppercase
-        document.getElementById('msg1').innerHTML = answer;
     }
     //if answer is true turn div green via classname
     else if (answer === true) {
     document.getElementById('msg1').className = "text-green-500";
-        //display if password has uppercase
-        document.getElementById('msg1').innerHTML = answer;
     }
 }
 
@@ -40,18 +39,17 @@ function checkLower() {
 
     //check if password has lowercasepattern
     let answer = lowercasepattern.test(pswd);
+    
+    //display if password has uppercase
+    document.getElementById('msg2').innerHTML = answer;
 
     //if answer is true turn div green via classname
     if (answer === false){
     document.getElementById('msg2').className = "text-red-600";
-        //display if password has uppercase
-        document.getElementById('msg2').innerHTML = answer;
     }
     //if answer is true turn div green via classname
     else if (answer === true) {
     document.getElementById('msg2').className = "text-green-500";
-        //display if password has uppercase
-        document.getElementById('msg2').innerHTML = answer;
     }
 }
 
@@ -68,17 +66,16 @@ function checkNumber() {
     //check if password has number
     let answer = numberPattern.test(pswd);
 
+    //display if password has number or not
+    document.getElementById('msg3').innerHTML = answer;
+        
     //if answer is true turn div green via classname
     if (answer === false){
     document.getElementById('msg3').className = "text-red-600";
-        //display if password has number or not
-        document.getElementById('msg3').innerHTML = answer;
     }
     //if answer is true turn div green via classname
     else if (answer === true) {
     document.getElementById('msg3').className = "text-green-500";
-        //display if password has number or not
-        document.getElementById('msg3').innerHTML = answer;
     }
 }
 
@@ -86,20 +83,10 @@ function checkNumber() {
 function checkLen() {
     //state pattern to match length
     //let lengthPattern = /{8,20}/;
+
     //get password value from input
     let pswd = document.getElementById('pswd').value;
-    //check the length of the password
-    //let answer = lengthPattern.getElementById(pswd);
-    //display if number of characters meet the minimum requirement
-    //document.getElementById('msg4').innerHTML = answer;
-    //if answer is false turn red
-    //if (answer === false) {
-    //    document.getElementById('msg4').className = "text-red-600";
-    //}
-    //if answer is true turn green
-    //if (answer === true) {
-    //    document.getElementById('msg4').className = "text-green-600";
-    //}
+
     if (pswd.length >= 8) {
         document.getElementById('msg4').className = "text-green-600"
         document.getElementById('msg4').innerHTML = "Correct"
@@ -109,3 +96,7 @@ function checkLen() {
         document.getElementById('msg4').innerHTML = "Short"
     }
 }
+
+//mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//document.getElementById("'msg5").innerHTML = "Valid email address!";
+//document.getElementById("'msg5").innerHTML = "You have entered an invalid email address!";
